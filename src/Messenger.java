@@ -1,15 +1,43 @@
 public class Messenger {
     private String message;
-    private int time;
+    private int reverceTime;
     private String senderID;
     private String receiverId;
+    private String senderName;
+    private String receiverName;
     private boolean messageReceived;
 
-    public Messenger(String message, int time, String senderID, String receiverId, boolean messageReceived) {
+    public Messenger(String message, int reverceTime, String senderID, String receiverId, String senderName, String receiverName, boolean messageReceived) {
         this.message = message;
-        this.time = time;
+        this.reverceTime = reverceTime;
         this.senderID = senderID;
         this.receiverId = receiverId;
+        this.senderName = senderName;
+        this.receiverName = receiverName;
+        this.messageReceived = messageReceived;
+    }
+
+    public String getSenderName() {
+        return senderName;
+    }
+
+    public void setSenderName(String senderName) {
+        this.senderName = senderName;
+    }
+
+    public String getReceiverName() {
+        return receiverName;
+    }
+
+    public void setReceiverName(String receiverName) {
+        this.receiverName = receiverName;
+    }
+
+    public boolean isMessageReceived() {
+        return messageReceived;
+    }
+
+    public void setMessageReceived(boolean messageReceived) {
         this.messageReceived = messageReceived;
     }
 
@@ -29,12 +57,12 @@ public class Messenger {
         this.message = message;
     }
 
-    public int getTime() {
-        return time;
+    public int getReverceTime() {
+        return reverceTime;
     }
 
-    public void setTime(int time) {
-        this.time = time;
+    public void setReverceTime(int reverceTime) {
+        this.reverceTime = reverceTime;
     }
 
     public String getSenderID() {
@@ -62,6 +90,4 @@ public class Messenger {
         else
             System.out.println("Message don't received.");
     }
-    private String sender;
-    private String receiver;
 }
